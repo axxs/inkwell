@@ -36,7 +36,7 @@
     ],
     "devDependencies": {
         "@babel/core": "^7.29.7",
-        "@babel/preset-env": "^7.20.2",
+        "@babel/preset-env": "^7.29.7",
         "@fontsource/bricolage-grotesque": "^5.2.10",
         "@fontsource/ibm-plex-mono": "^5.2.7",
         "@fontsource/newsreader": "^5.2.10",
