@@ -1,6 +1,6 @@
 # Inkwell
 
-A modern, dark-first [Ghost](https://ghost.org) theme built as a concept for [asf-iwa.org.au](https://asf-iwa.org.au) but fully white-label and reusable for any publication.
+A modern, dark-first [Ghost](https://ghost.org) theme with an editorial, type-driven aesthetic — fully white-label and reusable for any publication.
 
 ![Theme preview](assets/screenshot-desktop.jpg)
 
