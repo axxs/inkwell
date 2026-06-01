@@ -21,7 +21,7 @@ jobs:
         run: npm run zip
       - name: Publish release with theme zip
         # Pinned to a full commit SHA for supply-chain safety (softprops/action-gh-release v2).
-        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
+        uses: softprops/action-gh-release@b4309332981a82ec1c5618f44dd2e27cc8bfbfda # v3.0.0
         with:
           files: inkwell.zip
           generate_release_notes: true
