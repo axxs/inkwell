@@ -1,7 +1,8 @@
 # Inkwell
 
-A modern, dark-first [Ghost](https://ghost.org) theme with an editorial, type-driven aesthetic — fully white-label and reusable for any publication.
+A modern, dark-first [Ghost](https://ghost.org) theme with an editorial, type-driven aesthetic, fully white-label and reusable for any publication.
 
+Example with custom logo etc.
 ![Theme preview](assets/screenshot-desktop.jpg)
 
 ## Features
