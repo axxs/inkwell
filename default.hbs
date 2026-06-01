@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{meta_title}}</title>
+    {{!-- No-flash theme: set data-theme before paint (dark by default, honour saved choice / OS light) --}}
+    <script>
+      (function(){try{var t=localStorage.getItem('asf-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();
+    </script>
+    <link rel="stylesheet" href="{{asset "built/index.css"}}" />
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    {{> site-header}}
+    <main id="main" class="site-main">
+        {{{body}}}
+    </main>
+    {{> site-footer}}
+    <script src="{{asset "built/index.js"}}" type="module"></script>
+    {{ghost_foot}}
+</body>
+</html>

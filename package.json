@@ -1,0 +1,113 @@
+{
+    "name": "inkwell",
+    "description": "Inkwell — a modern, dark-first editorial Ghost theme",
+    "version": "0.1.0",
+    "engines": {
+        "ghost": ">=5.0.0"
+    },
+    "license": "MIT",
+    "screenshots": {
+        "desktop": "assets/screenshot-desktop.jpg"
+    },
+    "scripts": {
+        "clean": "node -e \"require('fs').rmSync('assets/built',{recursive:true,force:true})\"",
+        "dev": "rollup -c --environment BUILD:development -w",
+        "prebuild": "npm run clean",
+        "build": "rollup -c --environment BUILD:production",
+        "zip": "npm run build && bestzip $npm_package_name.zip assets/* partials/* *.hbs package.json",
+        "test": "npx gscan .",
+        "pretest": "npm run build"
+    },
+    "author": {
+        "name": "Axxs",
+        "email": "dave@hardmode.com.au"
+    },
+    "gpm": {
+        "type": "theme",
+        "categories": [
+            "Minimal",
+            "Magazine"
+        ]
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
+    "devDependencies": {
+        "@babel/core": "^7.21.0",
+        "@babel/preset-env": "^7.20.2",
+        "@fontsource/bricolage-grotesque": "^5.2.10",
+        "@fontsource/ibm-plex-mono": "^5.2.7",
+        "@fontsource/newsreader": "^5.2.10",
+        "@rollup/plugin-babel": "^6.0.3",
+        "@rollup/plugin-commonjs": "^29.0.0",
+        "@rollup/plugin-node-resolve": "^16.0.0",
+        "@rollup/plugin-replace": "^6.0.3",
+        "@rollup/plugin-terser": "^0.4.0",
+        "bestzip": "^2.2.1",
+        "postcss": "^8.4.24",
+        "postcss-import": "^16.0.0",
+        "postcss-preset-env": "^10.0.0",
+        "rollup": "^4.0.0",
+        "rollup-plugin-livereload": "^2.0.5",
+        "rollup-plugin-postcss": "^4.0.2"
+    },
+    "browserslist": [
+        "defaults"
+    ],
+    "config": {
+        "card_assets": true,
+        "posts_per_page": 15,
+        "custom": {
+            "emblem": {
+                "type": "image"
+            },
+            "header_subtitle": {
+                "type": "text",
+                "default": "Independent publication"
+            },
+            "footer_description": {
+                "type": "text",
+                "default": "A short description of your publication."
+            },
+            "footer_motto": {
+                "type": "text",
+                "default": ""
+            },
+            "subscribe_heading": {
+                "type": "text",
+                "default": "Subscribe"
+            },
+            "subscribe_text": {
+                "type": "text",
+                "default": "Get the latest posts delivered straight to your inbox."
+            }
+        },
+        "image_sizes": {
+            "xxs": {
+                "width": 30
+            },
+            "xs": {
+                "width": 100
+            },
+            "s": {
+                "width": 300
+            },
+            "m": {
+                "width": 600
+            },
+            "l": {
+                "width": 1200
+            },
+            "xl": {
+                "width": 2000
+            }
+        }
+    },
+    "type": "module",
+    "dependencies": {
+        "gsap": "^3.15.0",
+        "lenis": "^1.3.23"
+    }
+}

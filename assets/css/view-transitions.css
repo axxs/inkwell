@@ -1,0 +1,14 @@
+@view-transition { navigation: auto; }
+
+::view-transition-old(root) { animation-duration: var(--motion-base); animation-timing-function: var(--ease-out); }
+::view-transition-new(root) { animation-duration: var(--motion-base); animation-timing-function: var(--ease-out); }
+
+/* Persist header/footer across navigations */
+.site-header { view-transition-name: site-header; }
+.site-footer { view-transition-name: site-footer; }
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) { animation: none !important; }
+}

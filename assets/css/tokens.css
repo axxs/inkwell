@@ -1,0 +1,63 @@
+:root {
+  /* Brand constant */
+  --red:        #cc2230;
+
+  /* Type families (faces declared in fonts.css).
+     Honour Ghost's admin font settings (--gh-font-heading/--gh-font-body) when set,
+     otherwise fall back to the theme's brand fonts. */
+  --f-display: var(--gh-font-heading, "Bricolage Grotesque", system-ui, sans-serif);
+  --f-body:    var(--gh-font-body, "Newsreader", Georgia, "Times New Roman", serif);
+  --f-mono:    "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Fluid type scale */
+  --t-step--1: clamp(0.78rem, 0.74rem + 0.2vw, 0.88rem);
+  --t-step-0:  clamp(1rem, 0.95rem + 0.28vw, 1.15rem);
+  --t-step-1:  clamp(1.25rem, 1.1rem + 0.7vw, 1.6rem);
+  --t-step-2:  clamp(1.6rem, 1.3rem + 1.5vw, 2.6rem);
+  --t-step-3:  clamp(2.1rem, 1.5rem + 3vw, 4rem);
+  --t-step-4:  clamp(2.6rem, 1.7rem + 4.5vw, 5.5rem);
+
+  /* Spacing */
+  --sp-1: 0.5rem; --sp-2: 1rem; --sp-3: 1.5rem; --sp-4: 2.5rem; --sp-5: 4rem; --sp-6: 6rem;
+
+  /* Layout */
+  --measure: 66ch;
+  --container: 76rem;
+  --line-w: 1px;
+
+  /* Motion */
+  --motion-fast: 160ms;
+  --motion-base: 300ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ---- Semantic colours: DARK is the default theme ---- */
+  --bg:         #0e0e10;
+  --surface:    #141417;
+  --surface-2:  #1a1a1f;
+  --line:       #2a2a31;
+  --line-strong:#3a3a42;
+  --text:       #f1efe9;
+  --text-muted: #9a9aa2;
+  --accent:     var(--red);
+  --accent-ink: #ef4a52;   /* links / labels, readable on dark */
+  --on-accent:  #ffffff;
+  --grain:      0.05;
+  --shadow:     0 1px 0 rgba(0,0,0,0.4);
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg:         #ffffff;
+  --surface:    #ffffff;
+  --surface-2:  #fafafa;
+  --line:       #e6e6e6;
+  --line-strong:#d2d2d2;
+  --text:       #0a0a0a;
+  --text-muted: #5d5d5d;
+  --accent:     var(--red);
+  --accent-ink: #b81e2b;   /* links / labels, readable on light */
+  --on-accent:  #ffffff;
+  --grain:      0.025;
+  --shadow:     0 1px 0 rgba(0,0,0,0.06);
+  color-scheme: light;
+}

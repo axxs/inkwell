@@ -1,0 +1,12 @@
+{{!< default}}
+<header class="archive-header">
+  <div class="container">
+    <p class="eyebrow">Tag</p>
+    <h1>{{tag.name}}</h1>
+    {{#if tag.description}}<p class="archive-header__desc">{{tag.description}}</p>{{/if}}
+  </div>
+</header>
+<div class="container">
+  <div class="post-feed">{{#foreach posts}}{{> post-card}}{{/foreach}}</div>
+  {{pagination}}
+</div>

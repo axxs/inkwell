@@ -1,0 +1,17 @@
+{{!-- Brand mark. Editable in admin: theme setting "Emblem" (image) takes priority,
+     then Ghost's Brand logo, then a neutral built-in placeholder. --}}
+{{#if @custom.emblem}}
+  <img class="{{class}}" src="{{@custom.emblem}}" alt="{{@site.title}}"
+       {{#if eager}}fetchpriority="high"{{else}}loading="lazy"{{/if}}>
+{{else}}
+  {{#if @site.logo}}
+    <img class="{{class}}" src="{{@site.logo}}" alt="{{@site.title}}"
+         {{#if eager}}fetchpriority="high"{{else}}loading="lazy"{{/if}}>
+  {{else}}
+    <svg class="{{class}}" viewBox="0 0 100 100" role="img" aria-label="{{@site.title}}">
+      <circle cx="50" cy="50" r="49" fill="var(--surface-2)"/>
+      <path d="M50 1 a49 49 0 0 1 0 98 Z" fill="var(--accent)"/>
+      <path d="M50 1 a49 49 0 0 0 0 98 Z" fill="var(--text)"/>
+    </svg>
+  {{/if}}
+{{/if}}

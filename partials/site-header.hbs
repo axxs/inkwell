@@ -1,0 +1,29 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="{{@site.url}}">
+      {{> emblem class="brand__mark" eager=true}}
+      <span class="brand__text">
+        <span class="brand__name">{{@site.title}}</span>
+        {{#if @custom.header_subtitle}}<span class="brand__sub">{{@custom.header_subtitle}}</span>{{/if}}
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      {{navigation}}
+    </nav>
+
+    <div class="site-header__actions">
+      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+      </button>
+      {{#if @site.members_enabled}}
+        {{#unless @member}}
+          <a class="btn btn--solid" href="#/portal/signup" data-portal="signup">Subscribe</a>
+        {{else}}
+          <a class="btn btn--outline" href="#/portal/account" data-portal="account">Account</a>
+        {{/unless}}
+      {{/if}}
+    </div>
+  </div>
+</header>

@@ -1,0 +1,16 @@
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      {{> emblem}}
+      <p>{{@site.title}}{{#if @custom.footer_description}} &mdash; {{@custom.footer_description}}{{/if}}</p>
+    </div>
+    <nav class="site-footer__nav" aria-label="Secondary">
+      {{navigation type="secondary"}}
+    </nav>
+    <div class="site-footer__social">
+      {{#if @site.facebook}}<a href="https://www.facebook.com/{{@site.facebook}}" rel="me">Facebook</a>{{/if}}
+      {{#if @site.twitter}}<a href="https://x.com/{{@site.twitter}}" rel="me">X</a>{{/if}}
+    </div>
+    <p class="site-footer__copy">&copy; {{date format="YYYY"}} {{@site.title}}{{#if @custom.footer_motto}} &middot; {{@custom.footer_motto}}{{/if}}</p>
+  </div>
+</footer>

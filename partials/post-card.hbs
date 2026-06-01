@@ -1,0 +1,13 @@
+<article class="post-card{{#if @first}} post-card--feature{{/if}}" data-animate="card">
+  {{#if feature_image}}
+    <a class="post-card__media" href="{{url}}" tabindex="-1" aria-hidden="true">
+      <img src="{{#if @first}}{{img_url feature_image size="l"}}{{else}}{{img_url feature_image size="m"}}{{/if}}" alt="" loading="lazy" />
+    </a>
+  {{/if}}
+  <div class="post-card__body">
+    {{#if primary_tag}}<a class="label post-card__cat" href="{{primary_tag.url}}">{{primary_tag.name}}</a>{{/if}}
+    <h2 class="post-card__title"><a href="{{url}}">{{title}}</a></h2>
+    <p class="post-card__excerpt">{{excerpt words="22"}}</p>
+    <p class="post-card__meta">{{date format="D MMM YYYY"}} &mdash; {{reading_time}}</p>
+  </div>
+</article>
