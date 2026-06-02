@@ -44,7 +44,7 @@ In **Ghost Admin → Settings → Design**:
 ## Develop
 
 ```bash
-git clone <your-repo-url> inkwell
+git clone https://github.com/axxs/inkwell
 cd inkwell
 npm install --legacy-peer-deps   # the --legacy-peer-deps flag is required (toolchain peer-dep)
 npm run dev                      # compile CSS/JS and watch for changes
