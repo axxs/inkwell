@@ -48,7 +48,7 @@
         "bestzip": "^3.0.1",
         "postcss": "^8.5.15",
         "postcss-import": "^16.0.0",
-        "postcss-preset-env": "^10.0.0",
+        "postcss-preset-env": "^11.3.0",
         "rollup": "^4.0.0",
         "rollup-plugin-livereload": "^2.0.5",
         "rollup-plugin-postcss": "^4.0.2"
