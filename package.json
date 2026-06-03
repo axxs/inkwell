@@ -40,7 +40,7 @@
         "@fontsource/bricolage-grotesque": "^5.2.10",
         "@fontsource/ibm-plex-mono": "^5.2.7",
         "@fontsource/newsreader": "^5.2.10",
-        "@rollup/plugin-babel": "^6.0.3",
+        "@rollup/plugin-babel": "^7.1.0",
         "@rollup/plugin-commonjs": "^29.0.0",
         "@rollup/plugin-node-resolve": "^16.0.0",
         "@rollup/plugin-replace": "^6.0.3",
